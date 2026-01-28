@@ -27,7 +27,7 @@ public class SecurityConfig {
         }).sessionManagement((sm) -> {
             sm.sessionCreationPolicy(SessionCreationPolicy.STATELESS);
         }).authorizeHttpRequests((auth) -> {
-            ((AuthorizeHttpRequestsConfigurer.AuthorizedUrl)((AuthorizeHttpRequestsConfigurer.AuthorizedUrl)auth.requestMatchers(new String[]{"/auth/**", "/h2-console/**"})).permitAll().anyRequest()).authenticated();
+            ((AuthorizeHttpRequestsConfigurer.AuthorizedUrl)((AuthorizeHttpRequestsConfigurer.AuthorizedUrl)auth.requestMatchers(new String[]{"/","/auth/**", "/h2-console/**","/error"})).permitAll().anyRequest()).authenticated();
         }).headers((headers) -> {
             headers.frameOptions((frame) -> {
                 frame.disable();
