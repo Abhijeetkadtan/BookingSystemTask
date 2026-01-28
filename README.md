@@ -97,7 +97,9 @@ Two users try to book Slot ID = 1 simultaneously.
 
 ```bash
 mvn clean install
-3️⃣ Start Application
+```
+## 3️⃣ Start Application
+```
 mvn spring-boot:run
 ```
 ### App runs at:
